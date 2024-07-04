@@ -14,7 +14,14 @@ namespace GamePrototype.Units
         public uint Health
         {
             get => _health;
-            protected set => _health = value;
+            protected set
+            {
+                _health = value;
+                if (_health > _maxHealth)
+                {
+                    _health = _maxHealth;
+                }
+            } 
         }
 
         public uint MaxHealth => _maxHealth;

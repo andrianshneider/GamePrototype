@@ -1,25 +1,40 @@
 ﻿<Properties StartupConfiguration="{DD66E181-5549-4E58-B2BF-1E870F087123}|Default">
-  <MonoDevelop.Ide.ItemProperties.GamePrototype PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Units/Player.cs">
+    <Files>
+      <File FileName="Items/Item.cs" Line="1" Column="1" IsPinned="True" />
+      <File FileName="Combat/CombatManager.cs" Line="80" Column="14" />
+      <File FileName="Units/Player.cs" Line="61" Column="102" />
+      <File FileName="Items/EconomicItems/Grindstone.cs" Line="5" Column="44" />
+      <File FileName="Items/EconomicItems/HealthPotion.cs" Line="1" Column="1" />
+      <File FileName="Units/Unit.cs" Line="1" Column="1" />
+      <File FileName="Items/EquipItems/Armour.cs" Line="1" Column="1" />
+      <File FileName="Items/EquipItems/EquipItem.cs" Line="1" Column="1" />
+      <File FileName="Utils/EquipSlot.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="GamePrototype" expanded="True" selected="True" />
-        </State>
-      </Pad>
-      <Pad Id="ClassPad">
-        <State name="__root__">
-          <Node name="GamePrototype" expanded="True">
-            <Node name="GamePrototype" expanded="True" selected="True" />
+          <Node name="GamePrototype">
+            <Node name="GamePrototype">
+              <Node name="Combat" expanded="True" />
+              <Node name="Game" expanded="True" />
+              <Node name="Items" expanded="True">
+                <Node name="EconomicItems" expanded="True" />
+                <Node name="EquipItems" expanded="True" />
+              </Node>
+              <Node name="Units" expanded="True" />
+              <Node name="Utils" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.GamePrototype PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
 </Properties>

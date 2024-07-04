@@ -51,6 +51,16 @@ namespace GamePrototype.Units
             {
                 Health += healthPotion.HealthRestore;
             }
+
+            //использование точильного камня
+            if (economicItem is Grindstone grindStone)
+            {
+               if (_equipment.TryGetValue(EquipSlot.Armour, out var item) && item is Armour armour)
+                {
+                    armour.Repair(grindStone.DurabilityRestore);
+                    Console.WriteLine($"Durability repairedby grindstone! {armour.Durability}/{armour.MaxDurability}");
+                }
+            }
         }
 
         protected override uint CalculateAppliedDamage(uint damage)
@@ -58,6 +68,15 @@ namespace GamePrototype.Units
             if (_equipment.TryGetValue(EquipSlot.Armour, out var item) && item is Armour armour) 
             {
                 damage -= (uint)(damage * (armour.Defence / 100f));
+
+                //снижение прочности брони при получении урона
+                CalculateArmourDurability(armour);
+
+                void CalculateArmourDurability(Armour armour1)
+                {
+                    armour1.ReduceDurability(1);
+                    Console.WriteLine($"Durability reduced! {armour1.Durability}/{armour1.MaxDurability}");
+                }
             }
             return damage;
         }
