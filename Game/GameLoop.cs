@@ -22,11 +22,36 @@ namespace GamePrototype.Game
 
         private void Initialize()
         {
+            
             Console.WriteLine("Welcome, player!");
-            _dungeon = DungeonBuilder.BuildDungeon();
             Console.WriteLine("Enter your name");
             _player = UnitFactoryDemo.CreatePlayer(Console.ReadLine());
             Console.WriteLine($"Hello {_player.Name}");
+
+            //выбор уровня сложности
+            Console.WriteLine("Difficulty level");
+
+            foreach (Difficulty d in Enum.GetValues(typeof(Difficulty)))
+            {
+                Console.Write($"{d} - {(int)d}\t");
+            }
+
+
+            while (true)
+            {
+                if (Enum.TryParse<Difficulty>(Console.ReadLine(), out var difficulty))
+                {
+                    var currentDifficulty = difficulty;
+                    Console.WriteLine(currentDifficulty);
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Wrong difficulty!");
+                }
+            }
+
+            _dungeon = DungeonBuilder.BuildDungeon();
         }
 
         private void StartGameLoop()
@@ -94,8 +119,7 @@ namespace GamePrototype.Game
                 Console.Write($"{room.Key} - {(int) room.Key}\t");
             }
         }
-
-        
+                      
         #endregion
     }
 }
