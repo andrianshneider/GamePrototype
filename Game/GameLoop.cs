@@ -8,6 +8,7 @@ namespace GamePrototype.Game
     public sealed class GameLoop
     {
         private Unit _player;
+        private DungeonBuilderAbstract _newDungeon;
         private DungeonRoom _dungeon;
         private readonly CombatManager _combatManager = new CombatManager();
         
@@ -22,7 +23,7 @@ namespace GamePrototype.Game
 
         private void Initialize()
         {
-            
+            int currentDifficulty;
             Console.WriteLine("Welcome, player!");
             Console.WriteLine("Enter your name");
             _player = UnitFactoryDemo.CreatePlayer(Console.ReadLine());
@@ -41,8 +42,23 @@ namespace GamePrototype.Game
             {
                 if (Enum.TryParse<Difficulty>(Console.ReadLine(), out var difficulty))
                 {
-                    var currentDifficulty = difficulty;
-                    Console.WriteLine(currentDifficulty);
+                    currentDifficulty = (int)difficulty;
+                    
+                    switch (currentDifficulty)
+                    {
+                        case 1:
+                            _newDungeon = new DungeonBuilderEasy();
+                            _dungeon = _newDungeon.BuildDungeon();
+                            break;
+                        case 2:
+                            _newDungeon = new DungeonBuilderHard();
+                            _dungeon = _newDungeon.BuildDungeon();
+                            break;
+                        default:
+                            _dungeon = DungeonBuilder.BuildDungeon();
+                            break;
+                    }
+
                     break;
                 }
                 else
@@ -51,7 +67,7 @@ namespace GamePrototype.Game
                 }
             }
 
-            _dungeon = DungeonBuilder.BuildDungeon();
+            //_dungeon = DungeonBuilder.BuildDungeon();
         }
 
         private void StartGameLoop()

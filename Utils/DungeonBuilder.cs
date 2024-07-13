@@ -28,4 +28,5 @@ namespace GamePrototype.Utils
             return enter;
         }
     }
+
 }

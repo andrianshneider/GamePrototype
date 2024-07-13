@@ -1,32 +1,26 @@
 ﻿<Properties StartupConfiguration="{DD66E181-5549-4E58-B2BF-1E870F087123}|Default">
-  <MonoDevelop.Ide.ItemProperties.GamePrototype PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="Utils/DungeonBuilderAbstract.cs">
     <Files>
       <File FileName="Units/Player.cs" />
-      <File FileName="Units/Unit.cs" />
+      <File FileName="Units/Unit.cs" Line="1" Column="1" />
       <File FileName="Utils/UnitFactoryDemo.cs" Line="1" Column="1" />
-      <File FileName="Utils/DungeonBuilderAbstract.cs" Line="7" Column="4" />
-      <File FileName="Dungeon/Direction.cs" Line="1" Column="1" />
+      <File FileName="Utils/DungeonBuilderAbstract.cs" Line="45" Column="53" />
+      <File FileName="Dungeon/Direction.cs" />
       <File FileName="Dungeon/Difficulty.cs" Line="6" Column="20" />
-      <File FileName="Game/GameLoop.cs" Line="25" Column="13" />
-      <File FileName="Dungeon/DungeonRoom.cs" />
-      <File FileName="Utils/DungeonBuilder.cs" />
+      <File FileName="Game/GameLoop.cs" Line="51" Column="32" />
+      <File FileName="Dungeon/DungeonRoom.cs" Line="1" Column="1" />
+      <File FileName="Utils/DungeonBuilder.cs" Line="8" Column="49" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="GamePrototype">
             <Node name="GamePrototype">
+              <Node name="Combat" expanded="True" />
               <Node name="Dungeon" expanded="True" />
-              <Node name="Items" expanded="True">
-                <Node name="EconomicItems" expanded="True" />
-                <Node name="EquipItems" expanded="True" />
-              </Node>
               <Node name="Units" expanded="True" />
               <Node name="Utils" expanded="True">
                 <Node name="DungeonBuilderAbstract.cs" selected="True" />
@@ -38,4 +32,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.GamePrototype PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>
